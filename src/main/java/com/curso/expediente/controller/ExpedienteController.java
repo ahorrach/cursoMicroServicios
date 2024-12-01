@@ -1,6 +1,7 @@
 package com.curso.expediente.controller;
 
 import com.curso.expediente.model.dto.ExpedienteDTO;
+import com.curso.expediente.model.dto.request.CreateExpedienteRequest;
 import com.curso.expediente.model.entity.ExpedienteEntity;
 import com.curso.expediente.service.ExpedienteService;
 import io.swagger.v3.oas.annotations.Operation;
@@ -56,7 +57,7 @@ public class ExpedienteController {
 
     @PostMapping
     @Operation(summary = "Crear expediente", description = "Crea un nuevo expediente en la base de datos.")
-    public ResponseEntity<ExpedienteDTO> createExpediente(@RequestBody ExpedienteDTO expediente) {
+    public ResponseEntity<ExpedienteDTO> createExpediente(@RequestBody CreateExpedienteRequest expediente) {
         ExpedienteDTO createdExpediente = expedienteService.createExpediente(expediente);
         return new ResponseEntity<>(createdExpediente, HttpStatus.CREATED);
     }
