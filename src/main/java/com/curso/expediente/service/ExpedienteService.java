@@ -52,12 +52,6 @@ public class ExpedienteService {
         if (Objects.nonNull(expedienteEntityExistent)) {
            throw new RuntimeException("Expedietne ya existe");
         } else {
-            //        CiudadanoRequest ciudadanoRequest = new CiudadanoRequest();
-//        ciudadanoRequest.setNombre("ssss");
-//        ciudadanoRequest.setApellido1("sssssd");
-//        ciudadanoRequest.setApellido2("dddeded");
-//        ciudadanoRequest.setDniNie("11111111H");
-//        ciudadanoRequest.setEmail("a@b.com");
             Long ciudadano = ciudadanoApiService.altaCiudadano(expediente.getCiudadano());
         }
         ExpedienteDTO expedienteDTO = expedienteMapper.toExpedienteDTO(expediente.getExpediente());
