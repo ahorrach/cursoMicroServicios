@@ -11,4 +11,5 @@ public class ExpedienteDTO {
     private String notas;
     private Date createAt;
     private String dni;
+
 }

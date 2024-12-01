@@ -13,4 +13,6 @@ public interface ExpedienteRepository extends JpaRepository<ExpedienteEntity, Lo
     List<ExpedienteEntity> getByDni(String dni);
 
     List<ExpedienteEntity> getByTipoPrestacion(Integer tipoPrestacion);
+
+    ExpedienteEntity getByDniAndTipoPrestacion(String dni,Integer tipoPrestacion);
 }

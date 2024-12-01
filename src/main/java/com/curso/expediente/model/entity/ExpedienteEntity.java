@@ -13,7 +13,7 @@ import java.util.Date;
 public class ExpedienteEntity {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY) // Asume que la base de datos genera el ID
+    @GeneratedValue(strategy = GenerationType.IDENTITY) //
     @Column(name = "ID")
     private Long id;
 
@@ -24,7 +24,7 @@ public class ExpedienteEntity {
     private String notas;
 
     @Column(name = "CREATE_AT")
-    @Temporal(TemporalType.TIMESTAMP)  // Esto asegura que se almacene como fecha y hora
+    @Temporal(TemporalType.TIMESTAMP)
     private Date createAt;
 
     @Column(name = "DNI", length = 9)
